@@ -1,0 +1,604 @@
+[
+  {
+    "id": 1,
+    "label": "Root",
+    "isActive": 2,
+    "parentId": null,
+    "children": [
+      {
+        "id": 2,
+        "label": "C300_262",
+        "isActive": 2,
+        "parentId": 1,
+        "children": [
+          {
+            "id": 3,
+            "label": "CEEC300_155",
+            "isActive": 2,
+            "parentId": 2,
+            "children": [
+              {
+                "id": 4,
+                "label": "SCM_grid",
+                "isActive": 1,
+                "parentId": 3,
+                "children": null
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "label": "IOLINK_153",
+            "isActive": 0,
+            "parentId": 2,
+            "children": [
+              {
+                "id": 6,
+                "label": "AO_203",
+                "isActive": 2,
+                "parentId": 5,
+                "children": null
+              },
+              {
+                "id": 7,
+                "label": "DI-HV_169",
+                "isActive": 1,
+                "parentId": 5,
+                "children": null
+              },
+              {
+                "id": 8,
+                "label": "UIO-2_221",
+                "isActive": 0,
+                "parentId": 5,
+                "children": null
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "label": "IOLINK_154",
+            "isActive": 1,
+            "parentId": 2,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "label": "C300_sim",
+        "isActive": 2,
+        "parentId": 1,
+        "children": [
+          {
+            "id": 11,
+            "label": "CEEC300_155",
+            "isActive": 1,
+            "parentId": 10,
+            "children": [
+              {
+                "id": 12,
+                "label": "SCM_grid",
+                "isActive": 0,
+                "parentId": 11,
+                "children": null
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "label": "IOLINK_153",
+            "isActive": 2,
+            "parentId": 10,
+            "children": [
+              {
+                "id": 14,
+                "label": "AO_203",
+                "isActive": 1,
+                "parentId": 13,
+                "children": null
+              },
+              {
+                "id": 15,
+                "label": "DI-HV_169",
+                "isActive": 0,
+                "parentId": 13,
+                "children": null
+              },
+              {
+                "id": 16,
+                "label": "UIO-2_221",
+                "isActive": 2,
+                "parentId": 13,
+                "children": null
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "label": "IOLINK_154",
+            "isActive": 1,
+            "parentId": 10,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "label": "FIM4_299",
+        "isActive": 0,
+        "parentId": 1,
+        "children": [
+          {
+            "id": 19,
+            "label": "Child1",
+            "isActive": 2,
+            "parentId": 18,
+            "children": null
+          },
+          {
+            "id": 20,
+            "label": "Child2",
+            "isActive": 1,
+            "parentId": 18,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "label": "Unassigned",
+        "isActive": 1,
+        "parentId": 1,
+        "children": [
+          {
+            "id": 22,
+            "label": "example_c300pm_pidpla",
+            "isActive": 0,
+            "parentId": 21,
+            "children": null
+          },
+          {
+            "id": 23,
+            "label": "example_cascade",
+            "isActive": 2,
+            "parentId": 21,
+            "children": null
+          },
+          {
+            "id": 24,
+            "label": "example_IORef",
+            "isActive": 1,
+            "parentId": 21,
+            "children": null
+          },
+          {
+            "id": 25,
+            "label": "example_motor",
+            "isActive": 0,
+            "parentId": 21,
+            "children": null
+          },
+          {
+            "id": 26,
+            "label": "example_pid",
+            "isActive": 1,
+            "parentId": 21,
+            "children": null
+          },
+          {
+            "id": 27,
+            "label": "example_pidloop",
+            "isActive": 2,
+            "parentId": 21,
+            "children": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "C300_262",
+    "isActive": 2,
+    "parentId": 1,
+    "children": [
+      {
+        "id": 3,
+        "label": "CEEC300_155",
+        "isActive": 2,
+        "parentId": 2,
+        "children": [
+          {
+            "id": 4,
+            "label": "SCM_grid",
+            "isActive": 1,
+            "parentId": 3,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "IOLINK_153",
+        "isActive": 0,
+        "parentId": 2,
+        "children": [
+          {
+            "id": 6,
+            "label": "AO_203",
+            "isActive": 2,
+            "parentId": 5,
+            "children": null
+          },
+          {
+            "id": 7,
+            "label": "DI-HV_169",
+            "isActive": 1,
+            "parentId": 5,
+            "children": null
+          },
+          {
+            "id": 8,
+            "label": "UIO-2_221",
+            "isActive": 0,
+            "parentId": 5,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "label": "IOLINK_154",
+        "isActive": 1,
+        "parentId": 2,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "label": "CEEC300_155",
+    "isActive": 2,
+    "parentId": 2,
+    "children": [
+      {
+        "id": 4,
+        "label": "SCM_grid",
+        "isActive": 1,
+        "parentId": 3,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "label": "SCM_grid",
+    "isActive": 1,
+    "parentId": 3,
+    "children": null
+  },
+  {
+    "id": 5,
+    "label": "IOLINK_153",
+    "isActive": 0,
+    "parentId": 2,
+    "children": [
+      {
+        "id": 6,
+        "label": "AO_203",
+        "isActive": 2,
+        "parentId": 5,
+        "children": null
+      },
+      {
+        "id": 7,
+        "label": "DI-HV_169",
+        "isActive": 1,
+        "parentId": 5,
+        "children": null
+      },
+      {
+        "id": 8,
+        "label": "UIO-2_221",
+        "isActive": 0,
+        "parentId": 5,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "label": "AO_203",
+    "isActive": 2,
+    "parentId": 5,
+    "children": null
+  },
+  {
+    "id": 7,
+    "label": "DI-HV_169",
+    "isActive": 1,
+    "parentId": 5,
+    "children": null
+  },
+  {
+    "id": 8,
+    "label": "UIO-2_221",
+    "isActive": 0,
+    "parentId": 5,
+    "children": null
+  },
+  {
+    "id": 9,
+    "label": "IOLINK_154",
+    "isActive": 1,
+    "parentId": 2,
+    "children": null
+  },
+  {
+    "id": 10,
+    "label": "C300_sim",
+    "isActive": 2,
+    "parentId": 1,
+    "children": [
+      {
+        "id": 11,
+        "label": "CEEC300_155",
+        "isActive": 1,
+        "parentId": 10,
+        "children": [
+          {
+            "id": 12,
+            "label": "SCM_grid",
+            "isActive": 0,
+            "parentId": 11,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "label": "IOLINK_153",
+        "isActive": 2,
+        "parentId": 10,
+        "children": [
+          {
+            "id": 14,
+            "label": "AO_203",
+            "isActive": 1,
+            "parentId": 13,
+            "children": null
+          },
+          {
+            "id": 15,
+            "label": "DI-HV_169",
+            "isActive": 0,
+            "parentId": 13,
+            "children": null
+          },
+          {
+            "id": 16,
+            "label": "UIO-2_221",
+            "isActive": 2,
+            "parentId": 13,
+            "children": null
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "label": "IOLINK_154",
+        "isActive": 1,
+        "parentId": 10,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "label": "CEEC300_155",
+    "isActive": 1,
+    "parentId": 10,
+    "children": [
+      {
+        "id": 12,
+        "label": "SCM_grid",
+        "isActive": 0,
+        "parentId": 11,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "label": "SCM_grid",
+    "isActive": 0,
+    "parentId": 11,
+    "children": null
+  },
+  {
+    "id": 13,
+    "label": "IOLINK_153",
+    "isActive": 2,
+    "parentId": 10,
+    "children": [
+      {
+        "id": 14,
+        "label": "AO_203",
+        "isActive": 1,
+        "parentId": 13,
+        "children": null
+      },
+      {
+        "id": 15,
+        "label": "DI-HV_169",
+        "isActive": 0,
+        "parentId": 13,
+        "children": null
+      },
+      {
+        "id": 16,
+        "label": "UIO-2_221",
+        "isActive": 2,
+        "parentId": 13,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "label": "AO_203",
+    "isActive": 1,
+    "parentId": 13,
+    "children": null
+  },
+  {
+    "id": 15,
+    "label": "DI-HV_169",
+    "isActive": 0,
+    "parentId": 13,
+    "children": null
+  },
+  {
+    "id": 16,
+    "label": "UIO-2_221",
+    "isActive": 2,
+    "parentId": 13,
+    "children": null
+  },
+  {
+    "id": 17,
+    "label": "IOLINK_154",
+    "isActive": 1,
+    "parentId": 10,
+    "children": null
+  },
+  {
+    "id": 18,
+    "label": "FIM4_299",
+    "isActive": 0,
+    "parentId": 1,
+    "children": [
+      {
+        "id": 19,
+        "label": "Child1",
+        "isActive": 2,
+        "parentId": 18,
+        "children": null
+      },
+      {
+        "id": 20,
+        "label": "Child2",
+        "isActive": 1,
+        "parentId": 18,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "label": "Child1",
+    "isActive": 2,
+    "parentId": 18,
+    "children": null
+  },
+  {
+    "id": 20,
+    "label": "Child2",
+    "isActive": 1,
+    "parentId": 18,
+    "children": null
+  },
+  {
+    "id": 21,
+    "label": "Unassigned",
+    "isActive": 1,
+    "parentId": 1,
+    "children": [
+      {
+        "id": 22,
+        "label": "example_c300pm_pidpla",
+        "isActive": 0,
+        "parentId": 21,
+        "children": null
+      },
+      {
+        "id": 23,
+        "label": "example_cascade",
+        "isActive": 2,
+        "parentId": 21,
+        "children": null
+      },
+      {
+        "id": 24,
+        "label": "example_IORef",
+        "isActive": 1,
+        "parentId": 21,
+        "children": null
+      },
+      {
+        "id": 25,
+        "label": "example_motor",
+        "isActive": 0,
+        "parentId": 21,
+        "children": null
+      },
+      {
+        "id": 26,
+        "label": "example_pid",
+        "isActive": 1,
+        "parentId": 21,
+        "children": null
+      },
+      {
+        "id": 27,
+        "label": "example_pidloop",
+        "isActive": 2,
+        "parentId": 21,
+        "children": null
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "label": "example_c300pm_pidpla",
+    "isActive": 0,
+    "parentId": 21,
+    "children": null
+  },
+  {
+    "id": 23,
+    "label": "example_cascade",
+    "isActive": 2,
+    "parentId": 21,
+    "children": null
+  },
+  {
+    "id": 24,
+    "label": "example_IORef",
+    "isActive": 1,
+    "parentId": 21,
+    "children": null
+  },
+  {
+    "id": 25,
+    "label": "example_motor",
+    "isActive": 0,
+    "parentId": 21,
+    "children": null
+  },
+  {
+    "id": 26,
+    "label": "example_pid",
+    "isActive": 1,
+    "parentId": 21,
+    "children": null
+  },
+  {
+    "id": 27,
+    "label": "example_pidloop",
+    "isActive": 2,
+    "parentId": 21,
+    "children": null
+  }
+]
