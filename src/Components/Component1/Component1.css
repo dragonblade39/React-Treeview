@@ -9,8 +9,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -123,7 +122,7 @@
 }
 
 .MainContent__section-heading {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold;
   padding-bottom: 5px;
 }
@@ -134,6 +133,7 @@
   margin-bottom: 5px;
   padding: 5px;
   border: 1.5px solid #ddd;
+  
 }
 
 .MainContent__field-box label {
@@ -163,8 +163,8 @@
   padding: 5px;
   font-size: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
   background-color: #f0eeee;
+  box-shadow: 0 4px 12px rgba(79, 77, 77, 0.1);
 }
 
 .MainContent__field-box input[type="checkbox"] {
@@ -178,7 +178,6 @@
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   margin-top: 5px;
 }
@@ -264,26 +263,41 @@
 
 @media (max-width: 1024px) {
   .Component1__container {
-    margin-left: 300px;
+    margin-left: 280px;
   }
+  .MainContent__left-section {
+    width:45%;
+}
+.MainContent__right-section {
+  width:45%;
+}
 }
 
 @media (max-width: 768px) {
   .Component1__container {
-    margin-left: 250px;
+    margin-left: 70px;
+    width: 80%;
   }
+  .MainContent__left-section, .MainContent__right-section {
+    width: 93%;
+}
 }
 
 @media (max-width: 425px) {
   .Component1__container {
-    margin-left: 100px;
+    margin-left: 50px;
   }
+  
 }
 
 @media (max-width: 375px) {
   .Component1__container {
-    margin-left: 75px;
+    margin-left: 50px;
   }
+  .MainContent__left-section, .MainContent__right-section {
+    width: 90%;
+}
+
 }
 
 .StatisticsContent__container {

@@ -48,7 +48,7 @@ const Navbar = () => {
   const [nodeStatuses, setNodeStatuses] = useState({});
   const [expanded, setExpanded] = useState({});
   const [activeNodeId, setActiveNodeId] = useState(null);
-  const [isNavbarOpen, setIsNavbarOpen] = useState(window.innerWidth > 425);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(window.innerWidth > 769);
   const [showNotifications, setShowNotifications] = useState(false);
   const [notifications, setNotifications] = useState([]);
   const [remainingTimes, setRemainingTimes] = useState({});
@@ -229,6 +229,7 @@ const Navbar = () => {
         });
       } else {
         const response = await axios.get(`${API_URL}/children/${nodeId}`);
+        console.log("Child");
         if (response.data) {
           setTreeData((prevTree) =>
             updateNodeChildren(prevTree, nodeId, response.data)

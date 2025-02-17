@@ -248,7 +248,7 @@ body {
   color: #595959;
 }
 
-@media (min-width: 427px) {
+@media (min-width: 769px) {
   .navbar-toggle {
     display: none;
   }

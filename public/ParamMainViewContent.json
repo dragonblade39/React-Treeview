@@ -134,8 +134,8 @@
       },
       {
         "type": "button",
-        "label": "Reset EIM Associations",
-        "optionLabel": "Param_Reset EIM Associations",
+        "optionLabel": "Reset EIM Associations",
+        "label": "Param_Reset EIM Associations",
         "disabled": true
       }
     ],
