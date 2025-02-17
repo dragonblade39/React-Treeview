@@ -49,7 +49,6 @@ const Navbar = () => {
   const [expanded, setExpanded] = useState({});
   const [activeNodeId, setActiveNodeId] = useState(null);
   const [isNavbarOpen, setIsNavbarOpen] = useState(window.innerWidth > 425);
-  // Notification bar is hidden by default
   const [showNotifications, setShowNotifications] = useState(false);
   const [notifications, setNotifications] = useState([]);
   const [remainingTimes, setRemainingTimes] = useState({});
@@ -331,7 +330,6 @@ const Navbar = () => {
     }
   };
 
-  // Only open Component1 if the double-clicked node is the 1st parent's 1st child
   const handleDoubleClick = (node) => {
     if (
       treeData.length > 0 &&
@@ -448,7 +446,6 @@ const Navbar = () => {
         notificationRef.current &&
         !notificationRef.current.contains(event.target)
       ) {
-        // When clicking outside, close the notification bar and clear its content
         setShowNotifications(false);
         setNotifications([]);
         setRemainingTimes({});
@@ -482,11 +479,9 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Notification icon is always visible */}
       <div
         className="notification-bell"
         onClick={() => {
-          // Toggle notification bar. If closing it, clear notifications.
           setShowNotifications((prev) => {
             if (prev) {
               setNotifications([]);
@@ -522,7 +517,6 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Notification bar toggles on icon click */}
       {showNotifications && (
         <div
           className="notification-dropdown"

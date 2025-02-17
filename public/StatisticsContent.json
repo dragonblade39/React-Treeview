@@ -20,6 +20,26 @@
       "header": "Checkbox",
       "key": "score",
       "type": "checkbox"
+    },
+    { "header": "Number", "key": "id", "type": "number" },
+    {
+      "header": "Text",
+      "key": "name",
+      "type": "text"
+    },
+    {
+      "header": "Options",
+      "key": "gender",
+      "type": "select",
+      "options": [
+        { "value": "M", "text": "Option1" },
+        { "value": "F", "text": "Option2" }
+      ]
+    },
+    {
+      "header": "Checkbox",
+      "key": "score",
+      "type": "checkbox"
     }
   ],
   "data": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]

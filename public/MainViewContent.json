@@ -53,7 +53,7 @@
     ],
     "field2": [
       {
-        "label": "Network Address Configuration"
+        "label": "Network Address Configuration:"
       },
       {
         "label": "Device Index",
@@ -69,13 +69,15 @@
       }
     ],
     "field3": [
+      { "label": "Ethernet Protocols Supported:" },
       {
-        "label": "Ethernet Protocols Supported",
         "type": "checkbox",
-        "optionLabel": "EtherNet/IP"
+        "optionLabel": "EtherNet/IP",
+        "disabled": true
       }
     ],
     "field4": [
+      { "label": "State Information: " },
       {
         "label": "Controller State",
         "value": "NOTLOADED"
@@ -94,13 +96,10 @@
   "Section2": {
     "field1": [
       {
-        "label": "Enable Extended CC-PCNT02 Feature Configuration",
-        "description": "Checking this box indicates that the downloaded controller image will support extended features, such as Experion Profit Control and Ethernet Interface Module"
+        "label": "Enable Extended CC-PCNT02 Feature Configuration:"
       },
       {
-        "label": "Feature Configuration #"
-      },
-      {
+        "description": "Checking this box indicates that the downloaded controller image will support extended features, such as Experion Profit Control and Ethernet Interface Module",
         "type": "checkbox",
         "label": "Enable Extended Feature Configuration"
       },
@@ -110,7 +109,7 @@
     ],
     "field2": [
       {
-        "label": "Redundancy Configuration"
+        "label": "Redundancy Configuration:"
       },
       {
         "type": "checkbox",
@@ -122,7 +121,7 @@
     ],
     "field3": [
       {
-        "label": "EtherNet/IP Communication Mode"
+        "label": "EtherNet/IP Communication Mode:"
       },
       {
         "label": "Communication Mode:",
@@ -137,12 +136,13 @@
       {
         "type": "button",
         "label": "Reset EIM Associations",
+        "optionLabel": "Reset EIM Associations",
         "disabled": true
       }
     ],
     "field4": [
       {
-        "label": "Advanced Configuration"
+        "label": "Advanced Configuration:"
       },
       {
         "type": "checkbox",

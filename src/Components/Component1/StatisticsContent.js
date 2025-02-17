@@ -9,7 +9,7 @@ function StatisticsContent() {
   useEffect(() => {
     const fetchTableData = async () => {
       try {
-        const response = await fetch("/StatisticsContent.json"); // Adjust path if needed
+        const response = await fetch("/StatisticsContent.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -47,7 +47,10 @@ function StatisticsContent() {
               {columns.map((col, colIndex) => (
                 <td key={colIndex}>
                   {col.type === "select" ? (
-                    <select defaultValue={row[col.key]}>
+                    <select
+                      defaultValue={row[col.key]}
+                      className="StatisticsContent_select"
+                    >
                       {col.options &&
                         col.options.map((option, optionIndex) => (
                           <option key={optionIndex} value={option.value}>
@@ -61,6 +64,7 @@ function StatisticsContent() {
                       defaultValue={row[col.key]}
                       placeholder={col.placeholder || ""}
                       disabled={col.disabled || false}
+                      className="StatisticsContent_input"
                     />
                   ) : (
                     row[col.key]

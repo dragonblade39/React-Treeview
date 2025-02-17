@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Component1.css"; // Ensure this path matches your file structure
+import "./Component1.css";
 
 function MainContent({ url }) {
-  // Destructure url from props
   const [jsonData, setJsonData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -11,11 +10,10 @@ function MainContent({ url }) {
     const fetchData = async () => {
       let fetchUrl;
 
-      // Set URL based on input value
       if (url === "1") {
-        fetchUrl = "MainViewContent.json"; // Replace this with the actual URL for option "1"
+        fetchUrl = "MainViewContent.json";
       } else if (url === "2") {
-        fetchUrl = "ParamMainViewContent.json"; // Replace this with the actual URL for option "2"
+        fetchUrl = "ParamMainViewContent.json";
       } else {
         setError("Invalid URL option");
         setLoading(false);
@@ -23,14 +21,12 @@ function MainContent({ url }) {
       }
 
       try {
-        console.log(`Fetching data from: ${fetchUrl}`); // Debug log
         const response = await fetch(fetchUrl);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
         setJsonData(data);
-        console.log("Fetched data:", data); // Debug log
       } catch (error) {
         console.error("Error fetching data:", error);
         setError(error.message);
@@ -40,7 +36,7 @@ function MainContent({ url }) {
     };
 
     fetchData();
-  }, [url]); // Listen for changes in url prop
+  }, [url]);
 
   const renderField = (field, index, isFirstInSection = false) => {
     if (isFirstInSection && field.label && Object.keys(field).length === 1) {
@@ -77,7 +73,8 @@ function MainContent({ url }) {
         )}
         {field.type === "checkbox" && (
           <label>
-            <input type="checkbox" /> {field.optionLabel || ""}
+            <input type="checkbox" disabled={field.disabled} />{" "}
+            {field.optionLabel || ""}
           </label>
         )}
         {field.type === "button" && (
@@ -85,7 +82,7 @@ function MainContent({ url }) {
             className="MainContent__action-button"
             disabled={field.disabled}
           >
-            {field.label}
+            {field.optionLabel}
           </button>
         )}
         {"value" in field && <span>{field.value}</span>}
@@ -108,7 +105,7 @@ function MainContent({ url }) {
       if (typeof item === "object" && item !== null) {
         return (
           <div key={index} className="MainContent__section-box">
-            <h3>{item.label || ""}</h3>
+            <h4>{item.label || ""}</h4>
             {item.description && (
               <p className="MainContent__description-text">
                 {item.description}

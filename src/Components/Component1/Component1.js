@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import "./Component1.css"; // Ensure this file is correctly imported
+import "./Component1.css";
 import MainContent from "./MainContent";
-import StatisticsContent from "./StatisticsContent"; // Ensure this component exists
+import StatisticsContent from "./StatisticsContent";
+import Navbar from "../Navbar/Navbar";
 
 function Component1() {
   const [options, setOptions] = useState([]);
   const [isOptionsVisible, setIsOptionsVisible] = useState(true);
   const [hoveredOption, setHoveredOption] = useState(null);
-  const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState(8);
   const [doubleClickedOption, setDoubleClickedOption] = useState(null);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
@@ -44,7 +45,6 @@ function Component1() {
     setIsCheckboxChecked(!isCheckboxChecked);
   };
 
-  // Determine the URL argument based on checkbox state
   const urlArgument = isCheckboxChecked ? "2" : "1";
 
   return (
@@ -79,7 +79,6 @@ function Component1() {
         )}
       </div>
 
-      {/* Make sure the content container grows to fill space */}
       <div className="content-container">
         {selectedOptionIndex === 8 && <MainContent url={urlArgument} />}
         {selectedOptionIndex === 9 && <StatisticsContent />}
@@ -97,7 +96,14 @@ function Component1() {
           </label>
         </div>
         <div className="button-group">
-          <button className="Component1__sticky-button">Ok</button>
+          <button
+            className="Component1__sticky-button"
+            onClick={() => {
+              <Navbar />;
+            }}
+          >
+            Ok
+          </button>
           <button className="Component1__sticky-button">Cancel</button>
           <button className="Component1__sticky-button">Help</button>
         </div>

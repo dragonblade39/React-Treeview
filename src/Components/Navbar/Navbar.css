@@ -1,4 +1,3 @@
-/* Global Styles */
 html,
 body {
   height: 100%;
@@ -9,7 +8,6 @@ body {
   color: #595959;
 }
 
-/* Left Navbar (Lighter Industrial Theme) */
 .left-navbar {
   width: 280px;
   height: 100vh;
@@ -50,8 +48,6 @@ body {
   background-color: #8f8f8f;
 }
 
-/* Tree Nodes */
-/* Adjusted font sizes to create a more pronounced hierarchy */
 .tree-node {
   margin-top: 10px;
   padding: 8px 12px;
@@ -60,33 +56,32 @@ body {
   text-overflow: ellipsis;
   border-bottom: 1px solid #bbb;
   transition: background-color 0.2s ease, all 0.2s ease-in-out;
-  position: relative; /* needed for branch pseudo-elements */
+  position: relative;
 }
 
-/* Base Font Sizes for Tree Nodes */
 .tree-node.level-0 {
-  font-size: 1.4rem; /* reduced from 1.6rem */
+  font-size: 1.4rem;
   font-weight: bold;
   color: #404040;
 }
 
 .tree-node.level-1 {
-  font-size: 1.2rem; /* reduced from 1.4rem */
+  font-size: 1.2rem;
   color: #505050;
 }
 
 .tree-node.level-2 {
-  font-size: 1.1rem; /* reduced from 1.2rem */
+  font-size: 1.1rem;
   color: #606060;
 }
 
 .tree-node.level-3 {
-  font-size: 0.95rem; /* reduced from 1rem */
+  font-size: 0.95rem;
   color: #707070;
 }
 
 .tree-node.level-4 {
-  font-size: 0.85rem; /* reduced from 0.9rem */
+  font-size: 0.85rem;
   color: #808080;
 }
 
@@ -138,7 +133,6 @@ body {
   color: #404040;
 }
 
-/* Status Indicator (adjusted alignment) */
 .status-indicator {
   display: inline-flex;
   align-items: center;
@@ -149,71 +143,61 @@ body {
   font-size: 1rem;
 }
 
-/* Node children container with vertical branch line */
 .node-children {
-  padding-left: 20px; /* Increased indent for clarity */
+  padding-left: 20px;
   position: relative;
 }
 
-/* Vertical dashed line running down the children */
 .node-children::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 10px; /* center the line in the left indent */
+  left: 10px;
   width: 2px;
-  border-left: 2px dashed #333; /* dark dashed line */
+  border-left: 2px dashed #333;
 }
 
-/* Horizontal branch line connecting each node to the vertical line */
 .tree-node::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -10px; /* starting from the left edge of the node */
-  width: 10px; /* extend to the vertical line */
+  left: -10px;
+  width: 10px;
   height: 2px;
-  border-top: 2px dashed #333; /* dark dashed line */
+  border-top: 2px dashed #333;
 }
 
-/* Additional vertical branch extension for nodes (except the last one)
-   This creates a line that connects the horizontal branch to the vertical line in the parent container */
 .tree-node:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: -10px; /* align with the horizontal branch start */
+  left: -10px;
   top: 50%;
   bottom: 0;
   width: 2px;
   border-left: 2px dashed #333;
 }
 
-/* Separator Lines Between Sibling Children */
-/* Remove the default bottom border for nodes inside .node-children */
-.node-children > .tree-node {
+.node-children>.tree-node {
   border-bottom: none;
   position: relative;
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
 
-/* Add a dashed separator below each child node (except the last one) */
-.node-children > .tree-node:not(:last-child)::after {
+.node-children>.tree-node:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: 20px; /* align with the children indent */
+  left: 20px;
   right: 0;
   bottom: 0;
   border-bottom: 1px dashed #ccc;
 }
 
-/* Node title */
 .node-title {
   display: inline-block;
 }
 
-/* Status Icon Colors */
 .active-icon {
   color: #4caf50;
 }
@@ -226,7 +210,6 @@ body {
   color: #909090;
 }
 
-/* Content Area */
 .content {
   margin-left: 320px;
   padding: 20px;
@@ -239,7 +222,7 @@ body {
 }
 
 .content h1 {
-  font-size: 1.8rem; /* reduced from 2rem */
+  font-size: 1.8rem;
   color: #404040;
   margin-bottom: 16px;
   border-bottom: 1px solid #bbb;
@@ -247,13 +230,12 @@ body {
 }
 
 .content p {
-  font-size: 0.95rem; /* reduced from 1rem */
+  font-size: 0.95rem;
   line-height: 1.6;
   border-top: 1px solid #999;
   padding-top: 12px;
 }
 
-/* Toggle Button */
 .navbar-toggle {
   position: fixed;
   top: 10px;
@@ -278,7 +260,6 @@ body {
   }
 }
 
-/* Notification Styles */
 .notification-container {
   position: fixed;
   top: 10px;
@@ -315,11 +296,13 @@ body {
     opacity: 0;
     transform: translateX(10px);
   }
+
   10%,
   90% {
     opacity: 1;
     transform: translateX(0);
   }
+
   100% {
     opacity: 0;
     transform: translateX(10px);
@@ -384,128 +367,151 @@ body {
   color: #707070;
 }
 
-/* Responsive Adjustments */
-
-/* For very large screens, reduce some sizes slightly */
 @media (max-width: 2560px) {
   .left-navbar {
     width: 400px;
   }
+
   .content {
     margin-left: 500px;
   }
+
   .tree-node.level-0 {
     font-size: 1.8rem;
   }
+
   .tree-node.level-1 {
     font-size: 1.6rem;
   }
+
   .tree-node.level-2 {
     font-size: 1.4rem;
   }
+
   .tree-node.level-3 {
     font-size: 1.2rem;
   }
+
   .tree-node.level-4 {
     font-size: 1rem;
   }
 }
 
-/* For standard desktop screens */
 @media (max-width: 1440px) {
   .left-navbar {
     width: 300px;
   }
+
   .content {
     margin-left: 300px;
   }
+
   .tree-node.level-0 {
     font-size: 1.6rem;
   }
+
   .tree-node.level-1 {
     font-size: 1.4rem;
   }
+
   .tree-node.level-2 {
     font-size: 1.2rem;
   }
+
   .tree-node.level-3 {
     font-size: 1rem;
   }
+
   .tree-node.level-4 {
     font-size: 0.9rem;
   }
 }
 
-/* For smaller desktops/tablets */
 @media (max-width: 1024px) {
   .left-navbar {
     width: 250px;
   }
+
   .content {
     margin-left: 250px;
   }
+
   .tree-node.level-0 {
     font-size: 1.4rem;
   }
+
   .tree-node.level-1 {
     font-size: 1.2rem;
   }
+
   .tree-node.level-2 {
     font-size: 1rem;
   }
+
   .tree-node.level-3 {
     font-size: 0.9rem;
   }
+
   .tree-node.level-4 {
     font-size: 0.8rem;
   }
 }
 
-/* For small tablets and large mobile devices */
 @media (max-width: 768px) {
   .left-navbar {
     width: 220px;
   }
+
   .content {
     margin-left: 220px;
   }
+
   .tree-node.level-0 {
     font-size: 1.2rem;
   }
+
   .tree-node.level-1 {
     font-size: 1rem;
   }
+
   .tree-node.level-2 {
     font-size: 0.9rem;
   }
+
   .tree-node.level-3 {
     font-size: 0.85rem;
   }
+
   .tree-node.level-4 {
     font-size: 0.8rem;
   }
 }
 
-/* For mobile devices */
 @media (max-width: 425px) {
   .content {
     margin-left: 0;
   }
+
   .left-navbar {
     width: 180px;
   }
+
   .tree-node.level-0 {
     font-size: 1rem;
   }
+
   .tree-node.level-1 {
     font-size: 0.9rem;
   }
+
   .tree-node.level-2 {
     font-size: 0.8rem;
   }
+
   .tree-node.level-3 {
     font-size: 0.75rem;
   }
+
   .tree-node.level-4 {
     font-size: 0.7rem;
   }

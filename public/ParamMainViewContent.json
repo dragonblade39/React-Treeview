@@ -53,7 +53,7 @@
     ],
     "field2": [
       {
-        "label": "Network Address Configuration"
+        "label": "Network Address Configuration:"
       },
       {
         "label": "Param_DI",
@@ -69,13 +69,14 @@
       }
     ],
     "field3": [
+      { "label": "Ethernet Protocols Supported:" },
       {
-        "label": "Param_EthernetProtocols Supported:",
         "type": "checkbox",
-        "optionLabel": "EtherNet/IP"
+        "optionLabel": "Param_EtherNet/IP"
       }
     ],
     "field4": [
+      { "label": "State Information: " },
       {
         "label": "Param_CS:",
         "value": "NOTLOADED"
@@ -93,15 +94,12 @@
   "Section2": {
     "field1": [
       {
-        "label": " Param_Enable Extended CC-PCNT02 Feature Configuration:",
-        "description": "Checking this box indicates that the downloaded controller image will support extended features, such as Experion Profit Control and Ethernet Interface Module"
+        "label": "Enable Extended CC-PCNT02 Feature Configuration:"
       },
       {
-        "label": "Param_FC:"
-      },
-      {
+        "description": "Checking this box indicates that the downloaded controller image will support extended features, such as Experion Profit Control and Ethernet Interface Module",
         "type": "checkbox",
-        "label": "Param_EnableExtended FeatureConfiguration:"
+        "label": "Param_FC:"
       },
       {
         "label": "Param_CC:"
@@ -136,6 +134,7 @@
       {
         "type": "button",
         "label": "Reset EIM Associations",
+        "optionLabel":"Param_Reset EIM Associations",
         "disabled": true
       }
     ],
