@@ -4,7 +4,7 @@ import MainContent from "./MainContent";
 import StatisticsContent from "./StatisticsContent";
 import Navbar from "../Navbar/Navbar";
 
-function Component1() {
+function Component1({tagName}) {
   const [options, setOptions] = useState([]);
   const [isOptionsVisible, setIsOptionsVisible] = useState(true);
   const [hoveredOption, setHoveredOption] = useState(null);
@@ -80,7 +80,7 @@ function Component1() {
       </div>
 
       <div className="content-container">
-        {selectedOptionIndex === 8 && <MainContent url={urlArgument} />}
+        {selectedOptionIndex === 8 && <MainContent tagName={tagName} url={urlArgument} />}
         {selectedOptionIndex === 9 && <StatisticsContent />}
       </div>
 
@@ -98,9 +98,6 @@ function Component1() {
         <div className="button-group">
           <button
             className="Component1__sticky-button"
-            onClick={() => {
-              <Navbar />;
-            }}
           >
             Ok
           </button>

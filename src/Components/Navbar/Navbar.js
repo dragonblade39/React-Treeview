@@ -53,6 +53,7 @@ const Navbar = () => {
   const [notifications, setNotifications] = useState([]);
   const [remainingTimes, setRemainingTimes] = useState({});
   const [showComponent1, setShowComponent1] = useState(false);
+  const [tagName, setTagName]=useState("");
 
   const navbarRef = useRef(null);
   const notificationRef = useRef(null);
@@ -337,6 +338,7 @@ const Navbar = () => {
       treeData[0].children.length > 0 &&
       node.id === treeData[0].children[0].id
     ) {
+      setTagName(treeData[0].children[0].label);
       setShowComponent1(true);
     }
   };
@@ -545,7 +547,7 @@ const Navbar = () => {
       )}
 
       {showComponent1 && (
-        <Component1 onClose={() => setShowComponent1(false)} />
+        <Component1 tagName={tagName} onClose={() => setShowComponent1(false)} />
       )}
     </div>
   );

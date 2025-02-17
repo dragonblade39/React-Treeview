@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Component1.css";
 
-function MainContent({ url }) {
+function MainContent({tagName, url }) {
   const [jsonData, setJsonData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,6 +39,9 @@ function MainContent({ url }) {
   }, [url]);
 
   const renderField = (field, index, isFirstInSection = false) => {
+    // Define a value variable for input
+    let value = field.label === "Tag Name:" ? tagName : field.value;
+  
     if (isFirstInSection && field.label && Object.keys(field).length === 1) {
       return (
         <h3 key={index} className="MainContent__section-heading">
@@ -46,7 +49,7 @@ function MainContent({ url }) {
         </h3>
       );
     }
-
+  
     if (!isFirstInSection && field.label && Object.keys(field).length === 1) {
       return (
         <p key={index} className="MainContent__inline-label">
@@ -54,14 +57,21 @@ function MainContent({ url }) {
         </p>
       );
     }
-
+  
     return (
       <div key={index} className="MainContent__field-box">
         <label>{field.label}</label>
         {field.description && (
           <p className="MainContent__description-text">{field.description}</p>
         )}
-        {field.type === "text" && <input type="text" size={field.size || 20} />}
+        {field.type === "text" && (
+          <input 
+            type="text" 
+            size={field.size || 20} 
+            value={value} // Set the value of input field here
+            readOnly={field.label === "Tag Name:"} // If you want this field to be read-only
+          />
+        )}
         {field.type === "select" && (
           <select disabled={field.disabled}>
             {field.options?.map((option, i) => (
@@ -72,8 +82,8 @@ function MainContent({ url }) {
           </select>
         )}
         {field.type === "checkbox" && (
-          <label >
-            <input type="checkbox" disabled={field.disabled} className="MainContent_checkbox"/>{" "}
+          <label>
+            <input type="checkbox" disabled={field.disabled} className="MainContent_checkbox" />{" "}
             {field.optionLabel || ""}
           </label>
         )}
@@ -85,7 +95,6 @@ function MainContent({ url }) {
             {field.optionLabel}
           </button>
         )}
-        {"value" in field && <span>{field.value}</span>}
       </div>
     );
   };
