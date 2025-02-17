@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Component1.css";
 import MainContent from "./MainContent";
 import StatisticsContent from "./StatisticsContent";
-import Navbar from "../Navbar/Navbar";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-function Component1({tagName}) {
+function Component1({ tagName }) {
   const [options, setOptions] = useState([]);
-  const [isOptionsVisible, setIsOptionsVisible] = useState(true);
+  const [isOptionsVisible, setIsOptionsVisible] = useState(true); // Default to true
   const [hoveredOption, setHoveredOption] = useState(null);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(8);
   const [doubleClickedOption, setDoubleClickedOption] = useState(null);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
-
+  
   useEffect(() => {
     const fetchOptions = async () => {
       try {
@@ -28,7 +28,21 @@ function Component1({tagName}) {
     };
     fetchOptions();
   }, []);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 425) {
+        setIsOptionsVisible(true); // Options should be visible when screen wide
+      }
+    };
 
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   const toggleOptions = () => {
     setIsOptionsVisible(!isOptionsVisible);
   };
@@ -49,6 +63,14 @@ function Component1({tagName}) {
 
   return (
     <div className="Component1__container">
+      {window.innerWidth <= 425 && (
+        <button
+          onClick={toggleOptions}
+          className={`Component1__options-toggle ${isOptionsVisible ? "" : "active"}`}
+        >
+          Options {isOptionsVisible ? <i className="bi bi-arrow-bar-up"></i> : <i className="bi bi-arrow-bar-down"></i>}
+        </button>
+      )}
       <div
         className={`Component1__options-container ${
           isOptionsVisible ? "Component1__show" : "Component1__hide"
@@ -96,11 +118,7 @@ function Component1({tagName}) {
           </label>
         </div>
         <div className="button-group">
-          <button
-            className="Component1__sticky-button"
-          >
-            Ok
-          </button>
+          <button className="Component1__sticky-button">Ok</button>
           <button className="Component1__sticky-button">Cancel</button>
           <button className="Component1__sticky-button">Help</button>
         </div>

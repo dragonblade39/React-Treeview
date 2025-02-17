@@ -10,7 +10,7 @@
   overflow: hidden;
   border: 1px solid black;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1s ease, box-shadow 0.3s ease;
 }
 
 .Component1__options-container {
@@ -18,6 +18,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  transition: max-height 0.3s ease, opacity 0.3s ease; 
+}
+
+.Component1__show {
+  max-height: 500px;
+  opacity: 1; 
+  overflow: visible; 
+}
+
+.Component1__hide {
+  max-height: 0;
+  opacity: 0; 
+  overflow: hidden; 
 }
 
 .Component1__option-button {
@@ -25,13 +38,8 @@
   flex: 1 0 auto;
 }
 
-.Component1__show {
-  max-height: 500px;
-}
 
-.Component1__hide {
-  max-height: 0;
-}
+
 
 .Component1__selected {
   background-color: rgb(212, 210, 210);
@@ -111,6 +119,7 @@
   padding: 10px;
   border-radius: 2px;
   margin: 0;
+  z-index: 1000;
 }
 
 .MainContent__left-section {
@@ -222,6 +231,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
+    z-index: -100;
     padding: 10px;
   }
 
@@ -239,12 +249,27 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 425px) {
 
   .MainContent__field-box input[type="text"],
   .MainContent__field-box select {
     width: 90%;
   }
+  .Component1__options-toggle {
+    display: block;
+    cursor: pointer;
+    background-color: #A7A5A5;
+    color: white;
+    border: none;
+    padding: 5px;
+  }
+}
+
+
+
+.Component1__arrow {
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 @media (max-width: 2560px) {
