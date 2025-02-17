@@ -72,8 +72,8 @@ function MainContent({ url }) {
           </select>
         )}
         {field.type === "checkbox" && (
-          <label>
-            <input type="checkbox" disabled={field.disabled} />{" "}
+          <label >
+            <input type="checkbox" disabled={field.disabled} className="MainContent_checkbox"/>{" "}
             {field.optionLabel || ""}
           </label>
         )}

@@ -75,6 +75,7 @@
   align-items: center;
   padding: 10px;
   background-color: #f8f9fa;
+  margin-top: 10px;
 }
 
 .button-group {
@@ -207,6 +208,10 @@
 
 .MainContent__toggle-button:hover {
   background-color: #003f80;
+}
+
+.MainContent_checkbox:disabled {
+  cursor: not-allowed;
 }
 
 @media (max-width: 770px) {

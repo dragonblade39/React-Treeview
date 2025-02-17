@@ -72,7 +72,8 @@
       { "label": "Ethernet Protocols Supported:" },
       {
         "type": "checkbox",
-        "optionLabel": "Param_EtherNet/IP"
+        "optionLabel": "Param_EtherNet/IP",
+        "disabled":true
       }
     ],
     "field4": [
@@ -134,7 +135,7 @@
       {
         "type": "button",
         "label": "Reset EIM Associations",
-        "optionLabel":"Param_Reset EIM Associations",
+        "optionLabel": "Param_Reset EIM Associations",
         "disabled": true
       }
     ],
